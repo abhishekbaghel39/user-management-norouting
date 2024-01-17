@@ -15,10 +15,10 @@ const Login = () => {
 
     const Validate = () => {
         if(email === '' || password === '') {
-            toast('Please Enter email and password')
+            toast.error('Please Enter email and password')
         }
         else{
-            toast('Login Successfully')
+            toast.success('Login Successfully')
         }
     }
     return (
@@ -34,13 +34,15 @@ const Login = () => {
                         <div className="card-body">
                             <div className="form-group">
                                 <label>Email <span className="errmsg">*</span></label>
-                                <input className="form-control" value={email} onChange={e=>{setemail(e.target.value)}}></input>
-                            </div>
+                                <input type= "email" className="form-control" value={email} onChange={e=>{setemail(e.target.value)}} />
+                                </div>
                         </div>
                         <div className="card-body">
                             <div className="form-group">
                                 <label>Password<span className="errmsg">*</span></label>
-                                <input className="form-control" value={password} onChange={e=>{setPassword(e.target.value)}}></input>
+                                <input 
+                                type="password"
+                                className="form-control" value={password} onChange={e=>{setPassword(e.target.value)}}></input>
                             </div>
                         </div>
                         <div className="card-footer">
