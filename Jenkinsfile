@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    toos {
+    tools {
         nodejs: '21.7.1'
     }
     stages {
